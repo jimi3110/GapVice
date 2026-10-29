@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080b14"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <!-- Primary gradient for text/accents -->
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Blob filter -->
+    <filter id="blob">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative blobs -->
+  <circle cx="1050" cy="120" r="280" fill="#6366f1" opacity="0.18" filter="url(#blob)"/>
+  <circle cx="150" cy="520" r="220" fill="#a855f7" opacity="0.15" filter="url(#blob)"/>
+  <circle cx="600" cy="315" r="200" fill="#ec4899" opacity="0.08" filter="url(#blob)"/>
+
+  <!-- Grid pattern -->
+  <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+    <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(99,102,241,0.08)" stroke-width="1"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Logo icon background -->
+  <rect x="80" y="60" width="72" height="72" rx="18" fill="url(#grad1)" opacity="0.95"/>
+  <text x="116" y="108" text-anchor="middle" font-size="38">🎯</text>
+
+  <!-- Brand name -->
+  <text x="170" y="108" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="36" font-weight="900" fill="url(#grad1)">GapVice</text>
+
+  <!-- Main headline -->
+  <text x="80" y="230" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="72" font-weight="900" fill="#f8fafc" filter="url(#glow)">AI Career Gap</text>
+  <text x="80" y="320" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="72" font-weight="900" fill="url(#grad1)" filter="url(#glow)">Analyzer</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="385" font-family="Inter, Arial, sans-serif" font-size="26" fill="#94a3b8" font-weight="400">Identify skill gaps · Compare roles · Get your learning roadmap</text>
+
+  <!-- Stat pills -->
+  <!-- Pill 1 -->
+  <rect x="80" y="430" width="200" height="54" rx="27" fill="rgba(99,102,241,0.2)" stroke="rgba(99,102,241,0.5)" stroke-width="1.5"/>
+  <text x="180" y="464" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="22" font-weight="800" fill="#a5b4fc">5K+ Students</text>
+  <!-- Pill 2 -->
+  <rect x="296" y="430" width="180" height="54" rx="27" fill="rgba(168,85,247,0.2)" stroke="rgba(168,85,247,0.5)" stroke-width="1.5"/>
+  <text x="386" y="464" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="22" font-weight="800" fill="#c084fc">96+ Roles</text>
+  <!-- Pill 3 -->
+  <rect x="492" y="430" width="200" height="54" rx="27" fill="rgba(16,185,129,0.2)" stroke="rgba(16,185,129,0.5)" stroke-width="1.5"/>
+  <text x="592" y="464" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="22" font-weight="800" fill="#6ee7b7">95% Accuracy</text>
+
+  <!-- URL -->
+  <text x="80" y="560" font-family="Inter, Arial, sans-serif" font-size="20" fill="#475569" font-weight="500">gapvice.com</text>
+
+  <!-- Decorative card on right -->
+  <rect x="780" y="150" width="360" height="320" rx="24" fill="rgba(20,28,47,0.85)" stroke="rgba(99,102,241,0.3)" stroke-width="1.5"/>
+
+  <!-- Card header -->
+  <text x="800" y="200" font-family="Inter, Arial, sans-serif" font-size="14" fill="#94a3b8" font-weight="600">SOFTWARE DEVELOPER</text>
+  <text x="800" y="225" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="18" fill="#f8fafc" font-weight="700">Skill Analysis Report</text>
+
+  <!-- Score circle outline -->
+  <circle cx="870" cy="310" r="58" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="10"/>
+  <circle cx="870" cy="310" r="58" fill="none" stroke="url(#grad1)" stroke-width="10" stroke-linecap="round"
+    stroke-dasharray="364" stroke-dashoffset="91" transform="rotate(-90 870 310)"/>
+  <text x="870" y="305" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="28" font-weight="900" fill="#f8fafc">76%</text>
+  <text x="870" y="325" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" fill="#64748b" font-weight="600">MATCH</text>
+
+  <!-- Skill bars -->
+  <text x="960" y="278" font-family="Inter, Arial, sans-serif" font-size="13" fill="#94a3b8" font-weight="600">Python</text>
+  <rect x="960" y="285" width="150" height="7" rx="4" fill="rgba(255,255,255,0.08)"/>
+  <rect x="960" y="285" width="132" height="7" rx="4" fill="#10b981"/>
+
+  <text x="960" y="310" font-family="Inter, Arial, sans-serif" font-size="13" fill="#94a3b8" font-weight="600">Data Structures</text>
+  <rect x="960" y="317" width="150" height="7" rx="4" fill="rgba(255,255,255,0.08)"/>
+  <rect x="960" y="317" width="90" height="7" rx="4" fill="#6366f1"/>
+
+  <text x="960" y="342" font-family="Inter, Arial, sans-serif" font-size="13" fill="#94a3b8" font-weight="600">System Design</text>
+  <rect x="960" y="349" width="150" height="7" rx="4" fill="rgba(255,255,255,0.08)"/>
+  <rect x="960" y="349" width="45" height="7" rx="4" fill="#f59e0b"/>
+
+  <!-- Bottom label -->
+  <text x="960" y="430" font-family="Inter, Arial, sans-serif" font-size="13" fill="#6366f1" font-weight="700">✦ Free · No sign-up needed</text>
+</svg>

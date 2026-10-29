@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Disallow flow/result pages that have no standalone search value
+Disallow: /skills.html
+Disallow: /results.html
+
+# Legal pages (already noindex, but belt-and-suspenders)
+Disallow: /privacy-policy.html
+Disallow: /terms-conditions.html
+Disallow: /cookie-policy.html
+
+# Sitemap
+Sitemap: https://gapvice.netlify.app/sitemap.xml

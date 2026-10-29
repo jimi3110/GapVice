@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills by Category – Explore All Skill Areas | GapVice</title>
+    <meta name="description" content="Browse skills organized by category on GapVice. Explore Tech, Data, Design, Healthcare, Finance, and 20+ more skill areas to find learning resources and career guidance." />
+    <meta name="keywords" content="skills by category, tech skills, data skills, design skills, career skill areas, GapVice" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="GapVice" />
+    <link rel="canonical" href="https://gapvice.netlify.app/category-skills.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="GapVice" />
+    <meta property="og:title" content="Skills by Category | GapVice" />
+    <meta property="og:description" content="Explore all skill categories on GapVice — from AI & Machine Learning to Law and Healthcare." />
+    <meta property="og:url" content="https://gapvice.netlify.app/category-skills.html" />
+    <meta property="og:image" content="https://gapvice.netlify.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="GapVice – Browse Skills by Category" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@gapvice" />
+    <meta name="twitter:title" content="Skills by Category | GapVice" />
+    <meta name="twitter:description" content="Browse 20+ skill categories on GapVice and find top resources for your career path." />
+    <meta name="twitter:image" content="https://gapvice.netlify.app/og-image.png" />
+    <meta name="twitter:image:alt" content="GapVice – Browse Skills by Category" />
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#6366f1" />
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://gapvice.netlify.app/category-skills.html",
+      "name": "Skills by Category – GapVice",
+      "description": "Explore all skill categories on GapVice across Tech, Data, Design, Healthcare, Finance, and more.",
+      "url": "https://gapvice.netlify.app/category-skills.html",
+      "isPartOf": { "@type": "WebSite", "@id": "https://gapvice.netlify.app/#website", "name": "GapVice", "url": "https://gapvice.netlify.app/" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gapvice.netlify.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Courses", "item": "https://gapvice.netlify.app/courses.html" },
+          { "@type": "ListItem", "position": 3, "name": "Skills by Category", "item": "https://gapvice.netlify.app/category-skills.html" }
+        ]
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>" />
+    <style>
+        .category-page {
+            padding: 60px 0;
+            min-height: calc(100vh - 80px);
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 25px;
+            padding: 10px 16px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .category-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .category-heading h1 {
+            margin: 0 0 10px;
+        }
+
+        .category-heading p {
+            color: var(--text-secondary);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+
+        .skill-card {
+            display: flex;
+            align-items: center;
+            min-height: 65px;
+            padding: 15px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: var(--shadow-sm);
+            transition: .2s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary);
+        }
+
+        @media(max-width:1000px) {
+            .skills-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media(max-width:650px) {
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .skill-card {
+                min-height: 55px;
+                padding: 10px 8px;
+                font-size: 0.82rem;
+                border-radius: 12px;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+    </style>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <main class="category-page">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+                <a href="courses.html" class="back-btn" style="margin-bottom: 0;"> Back to Categories</a>
+                <button class="btn-dark-mode theme-toggle-btn" id="themeToggle" title="Toggle dark mode"
+                    style="font-size: 1.2rem; display: flex; align-items: center;"><i class="ph ph-moon"></i></button>
+            </div>
+            <div class="category-heading">
+                <h1 id="categoryTitle"></h1>
+                <p id="categoryCount"></p>
+            </div>
+            <div id="skillsGrid" class="skills-grid"></div>
+        </div>
+    </main>
+
+    <script src="app.js?v=2"></script>
+    <script>
+        const SKILLS_BY_CATEGORY = {
+            "AI & Machine Learning": ["AI Agents", "AI Auditing", "AI Automation", "AI Ethics", "AI Evaluation", "AI Governance", "AI Research", "AI Safety", "Artificial Intelligence", "Computer Vision", "Deep Learning", "Explainable AI", "Feature Engineering", "Game AI", "Generative AI", "Large Language Models (LLMs)", "LLM Applications", "Machine Learning", "Mathematics for Machine Learning", "MLOps", "Model Deployment", "Natural Language Processing", "Prompt Engineering", "PyTorch", "Reinforcement Learning", "Responsible AI", "Retrieval-Augmented Generation", "Supervised Learning", "TensorFlow", "Unsupervised Learning"],
+            "Programming Languages": ["ABAP", "Apex", "Assembly", "Bash", "C", "C#", "C++", "Clojure", "COBOL", "D", "Dart", "Elixir", "Erlang", "F#", "Fortran", "Go", "Haskell", "Java", "JavaScript", "Julia", "Kotlin", "Lua", "MATLAB", "Move", "Objective-C", "Perl", "PHP", "PowerShell", "Python", "R", "Ruby", "Rust", "Scala", "Solidity", "Swift", "TypeScript", "Visual Basic", "Vyper"],
+            "Computer Science & Algorithms": ["Advanced Graph Algorithms", "Algorithms", "Arrays", "Binary Search Trees", "CAP Theorem", "Competitive Programming", "Compiler Design", "Complexity / Scalability", "Data Structures", "Design & Analysis of Algorithms", "Discrete Mathematics", "Divide & Conquer", "Dynamic Programming", "Graph Theory", "Graphs", "Greedy Algorithms", "Hash Tables", "Heaps", "Linked Lists", "Logic", "Number Theory", "Recursion & Backtracking", "Searching Algorithms", "Sorting Algorithms", "Stacks & Queues", "Theory of Computation", "Trees"],
+            "Software Development": ["Clean Code", "Code Review", "Debugging", "Design Patterns", "Developer Experience", "Developer Tools", "Functional Programming", "Git & GitHub", "GitHub Actions", "High-Level Design", "Low-Level Design", "Object-Oriented Programming", "Open Source Development", "Refactoring", "Requirements Engineering", "Software Architecture", "Software Design", "Software Development Life Cycle (SDLC)", "Software Engineering", "System Architecture", "System Design", "System Design Fundamentals", "System Design Interview", "Version Control"],
+            "Web & App Development": ["Android Development", "Android Development with Java", "API Development", "CSS", "Express.js", "Flutter", "Full-Stack Development", "GraphQL", "HTML", "iOS Development", "JavaScript", "Next.js", "Node.js", "Progressive Web Apps", "React Native", "React.js", "Responsive Web Design", "REST APIs", "Shopify", "UI Design", "Web Accessibility", "Webflow", "Wix", "WooCommerce", "WordPress"],
+            "Data Science & Analytics": ["Creator Analytics", "Customer Analytics", "Data Analysis", "Data Science", "Data Visualization", "Exploratory Data Analysis", "Financial Analytics", "Forecasting", "Healthcare Analytics", "HR Analytics", "Marketing Analytics", "Matplotlib", "NumPy", "Operations Analytics", "Pandas", "Power BI", "Predictive Analytics", "Prescriptive Analytics", "Probability", "Product Analytics", "Python for Data Analysis", "Python for Data Science", "Python Scientific Computing", "Real Estate Analytics", "Sales Analytics", "Statistical Analysis", "Statistical Modeling", "Supply Chain Analytics", "Tableau", "Time-Series Analysis"],
+            "Databases & Data Engineering": ["Apache Spark", "Big Data", "Data Engineering", "Data Modeling", "Data Pipelines", "Data Warehousing", "Database Administration", "Database Design", "Database Management Systems", "Database Normalization", "Database Scaling", "ETL", "Metadata", "Metadata Management", "MongoDB", "MySQL", "NoSQL Databases", "Oracle", "PL/SQL", "PostgreSQL", "Query Optimization", "Redis", "SQL", "SQL for Data Analysis", "T-SQL"],
+            "Cloud & DevOps": ["Ansible", "AWS", "CI/CD", "Cloud Architecture", "Cloud Computing", "Cloud Cost Management", "Cloud Governance", "Cloud Migration", "Cloud Networking", "Cloud Security", "Cloud Storage", "Docker", "Embedded Linux", "FinOps", "Google Cloud", "Grafana", "Hybrid Cloud", "Infrastructure as Code", "Jenkins", "Kubernetes", "Linux", "Linux Administration", "Load Balancing", "Microsoft Azure", "Monitoring & Logging", "Multi-Cloud", "Prometheus", "Serverless Architecture", "Site Reliability Engineering", "Terraform"],
+            "Cybersecurity": ["Authentication & Authorization", "Capture the Flag (CTF)", "Cryptography", "Cyber Forensics", "Cyber Law", "Cyber Risk", "Cybersecurity Audit", "Cybersecurity Fundamentals", "Digital Forensics", "Embedded Security", "Ethical Hacking", "Identity & Access Management", "Incident Response", "Information Security", "IoT Security", "Malware Analysis", "Network Security", "OWASP Top 10", "Penetration Testing", "Quantum Cryptography", "Secure Coding", "Security Awareness", "Security Operations / SOC", "Security Tools", "SIEM", "Threat Intelligence", "Vulnerability Assessment", "Web Application Security", "Web Security"],
+            "Networking": ["4G", "5G", "6G", "Communication Systems", "Computer Networking", "Computer Networks", "Fiber Optics", "Network Engineering", "Network Optimization", "Network Planning", "Network Security", "Network Troubleshooting", "Optical Communication", "Satellite Communication", "Telecommunications", "VoIP", "Wireless Communication"],
+            "Embedded Systems & IoT": ["Agricultural IoT", "Arduino", "CAN Bus", "Embedded C", "Embedded C++", "Embedded Systems", "ESP32", "Firmware Development", "HMI", "I2C", "Industrial Automation", "Industrial IoT", "Internet of Things (IoT)", "IoT", "IoT Architecture", "IoT Cloud Platforms", "Microcontrollers", "Microprocessors", "MQTT", "PLC", "Raspberry Pi", "RTOS", "SCADA", "Sensors", "Smart Home", "Smart Infrastructure", "SPI", "UART"],
+            "Robotics & Automation": ["Agricultural Drones", "Agricultural Robotics", "Automation Anywhere", "Autonomous Drones", "Drone Electronics", "Drone Inspection", "Drone Mapping", "Drone Piloting", "Drone Programming", "Factory Automation", "Industrial Robotics", "Intelligent Automation", "Medical Robotics", "Motion Control", "No-Code Automation", "Power Automate", "Robotic Process Automation", "Robotics", "UAV Maintenance", "UAV Systems", "UiPath", "Vehicle Control Systems", "Workflow Automation", "Zapier", "Zapier Automation"],
+            "UI/UX & Product Design": ["Accessibility Design", "Accessibility Testing", "Accessible Product Design", "AI Workflow Design", "AR/VR UI/UX", "Design Systems", "Design Thinking", "Figma", "Framer", "Human-Computer Interaction", "Information Architecture", "Interaction Design", "Product Design", "Product Discovery", "Product Management", "Product Strategy", "Product Testing", "Product-Market Fit", "Prototyping", "UI Design", "Universal Design", "User Research", "UX Design", "UX Research", "Wireframing"],
+            "Graphic & Visual Design": ["2D Animation", "3D Animation", "Adobe Illustrator", "Adobe Photoshop", "Animation", "Book Design", "Branding", "Cataloguing", "Character Animation", "Character Design", "Compositing", "Concept Art", "Digital Art", "Digital Illustration", "Graphic Design", "Illustration", "InDesign", "Motion Graphics", "Personal Branding", "Rendering", "Storyboarding", "Texturing", "Typography", "VFX", "Visual Development"],
+            "3D, Game & XR": ["3D Mathematics", "3D Modeling", "Augmented Reality", "Blender", "Cinema 4D", "Game AI", "Game Development Fundamentals", "Game Physics", "GDScript", "Houdini", "Maya", "Metaverse Development", "Mixed Reality", "Spatial Computing", "Unity", "Unreal Engine", "Virtual Reality", "XR Development"],
+            "Business & Management": ["Business Analysis", "Business Communication", "Business Development", "Business Management", "Business Planning", "Business Process Automation", "Business Process Management", "Business Strategy", "Change Management", "Knowledge Management", "Leadership", "Management Consulting", "Negotiation", "Operations Consulting", "Operations Management", "Program Management", "Project Management", "Quality Management", "Risk Management", "Strategic Management", "Strategy Consulting", "Technology Consulting", "Time Management"],
+            "Marketing & Sales": ["Account Management", "Affiliate Marketing", "B2B Sales", "B2C Sales", "Brand Management", "Brand Strategy", "Content Marketing", "Conversion Rate Optimization", "CRM", "Customer Experience", "Customer Insights", "Customer Journey Mapping", "Customer Success Management", "Digital Marketing", "Email Marketing", "Enterprise Sales", "Google Ads", "Influencer Marketing", "Lead Generation", "Market Analysis", "Market Research", "Market Segmentation", "Media Buying", "Media Planning", "Meta Ads", "Sales Management", "Sales Operations", "Salesforce", "Search Engine Marketing (SEM)", "Search Engine Optimization (SEO)", "Social Media Marketing"],
+            "Finance & Accounting": ["Asset Management", "Auditing", "Capital Markets", "Corporate Finance", "Cost Accounting", "Derivatives", "Equity Research", "External Auditing", "Financial Accounting", "Financial Analysis", "Financial Analytics", "Financial Audit", "Financial Mathematics", "Financial Modeling", "Financial Reporting", "Financial Risk", "Fixed Income", "Foreign Exchange", "Forensic Audit", "Fundamental Analysis", "Futures", "Internal Auditing", "Investment Analysis", "Investment Banking", "Management Accounting", "Options Trading", "Portfolio Management", "Private Equity", "Quantitative Finance", "Startup Finance", "Stock Market", "Tax Accounting", "Taxation", "Technical Analysis", "Treasury Management", "Venture Capital", "Wealth Management"],
+            "Entrepreneurship & Startups": ["Business Model Design", "Cap Tables", "Competitive Analysis", "Competitive Intelligence", "Customer Discovery", "Deal Structuring", "Due Diligence", "Entrepreneurship", "Fundraising", "Lean Startup", "Product-Market Fit", "Startup Finance", "Startup Management", "Startup Marketing", "Term Sheets", "Venture Capital"],
+            "Supply Chain & Operations": ["Cold Chain Logistics", "E-Commerce Logistics", "Facility Layout", "Facility Management", "Freight Forwarding", "Inventory Forecasting", "Inventory Management", "Last-Mile Delivery", "Lean Manufacturing", "Logistics & Freight", "Manufacturing Processes", "Manufacturing QA", "Network Optimization", "Operations Research", "Process Improvement", "Process Mining", "Process Optimization", "Procurement Analytics", "Production Engineering", "Production Planning", "Route Optimization", "Six Sigma", "Supply Chain", "Supply Chain Analytics", "Supply Chain Management", "Sustainable Supply Chains", "Transportation Planning", "Warehouse Automation"],
+            "Engineering & Electronics": ["Analog Electronics", "Analog IC Design", "Circuit Theory", "Control Systems", "Digital Electronics", "Digital IC Design", "Electrical Engineering", "Electrical Machines", "Electromagnetism", "Electronics", "FPGA", "IC Design", "Instrumentation", "MEMS", "Microwave Engineering", "Optoelectronics", "PCB Design", "Physical Design", "Power Electronics", "Power Systems", "RF Engineering", "Semiconductor Engineering", "Semiconductor Fabrication", "Semiconductor Manufacturing", "Semiconductor Packaging", "Semiconductor Physics", "Signals & Systems", "SystemVerilog", "Verilog", "VLSI", "VLSI Design"],
+            "Mechanical / Civil / Industrial Engineering": ["ANSYS", "AutoCAD", "BIM", "CATIA", "Civil Engineering", "Computational Fluid Dynamics", "Engineering Drawing", "ETABS", "Finite Element Analysis", "Fluid Mechanics", "Geotechnical Engineering", "Heat Transfer", "Hydraulics", "Industrial Engineering", "Machine Design", "Material Testing", "MATLAB", "Mechanical Engineering", "Process Engineering", "Revit", "Simulink", "Soil Mechanics", "SolidWorks", "STAAD.Pro", "Strength of Materials", "Structural Analysis", "Structural Engineering", "Thermodynamics"],
+            "Aerospace & Space": ["Aerodynamics", "Aerospace Engineering", "Aircraft Maintenance", "Aircraft Structures", "Astronomy", "Astrophysics", "Avionics", "Flight Control", "Flight Mechanics", "Flight Operations", "Launch Vehicle Engineering", "Orbital Mechanics", "Planetary Science", "Propulsion", "Rocket Propulsion", "Rocket Science", "Satellite Engineering", "Satellite Technology", "Space Law", "Space Medicine", "Space Policy", "Space Systems Engineering"],
+            "Environment & Sustainability": ["Biofuels", "Biomass Energy", "Circular Economy", "Climate Policy", "Climate Science", "Corporate Sustainability", "Energy Storage", "Environmental Engineering", "Environmental Impact Assessment", "Environmental Law", "Environmental Management", "Environmental Policy", "Environmental Science", "ESG", "Geothermal Energy", "Hydrogen Energy", "Hydropower", "Life Cycle Assessment", "Recycling", "Renewable Energy", "Solar Energy", "Solar PV", "Solar Thermal", "Sustainable Development", "Waste Management", "Water Infrastructure", "Water Quality", "Water Treatment", "Wind Energy"],
+            "Agriculture": ["Agricultural Biotechnology", "Agricultural Drones", "Agricultural Engineering", "Agricultural IoT", "Agricultural Robotics", "Agronomy", "Aquaculture", "Beekeeping", "Crop Management", "Crop Monitoring", "Dairy Farming", "Digital Agriculture", "Farm Analytics", "Farm Management", "Fisheries Science", "Floriculture", "Forestry", "Horticulture", "Hydroponics", "Irrigation", "Mushroom Cultivation", "Organic Farming", "Plant Pathology", "Poultry Farming", "Precision Agriculture", "Smart Agriculture", "Soil Science", "Wildlife Conservation"],
+            "Healthcare & Life Sciences": ["Assistive Technology", "Bioinformatics", "Biomedical Engineering", "Biotechnology", "Clinical Laboratory Science", "Clinical Nutrition", "Clinical Psychology", "Cognitive Psychology", "Computational Biology", "Digital Health", "Epidemiology", "Genetics", "Genomics", "Health Informatics", "Healthcare", "Healthcare IT", "Healthcare Management", "Healthcare Operations", "Immunology", "Medical Imaging", "Medical Laboratory Techniques", "Medical Robotics", "Microbiology", "Molecular Biology", "Neuroscience", "Nutrition", "Pharmacology", "Proteomics", "Psychology", "Public Health", "Rehabilitation Technology", "Telemedicine"],
+            "Law, Policy & Governance": ["AI Governance", "AI Regulation", "Constitutional Law", "Contract Law", "Contract Negotiation", "Copyright Law", "Corporate Governance", "Corporate Law", "Criminal Law", "Cyber Law", "Economic Policy", "Foreign Policy", "Governance", "Information Governance", "Intellectual Property Law", "International Law", "IT Governance", "Law", "Legal & Compliance", "Legal Operations", "Legal Research", "Maritime Law", "Model Governance", "Patent Law", "Policy Analysis", "Policy Research", "Public Policy", "Regulatory Compliance", "Space Law", "Tax Law", "Trademark Law"],
+            "Communication & Writing": ["Academic Writing", "Business Communication", "Communication Skills", "Copy Editing", "Copywriting", "Corporate Communications", "Creative Writing", "Crisis Communication", "English Communication", "Grant Writing", "Legal Writing", "Presentation Skills", "Professional Writing", "Proofreading", "Proposal Writing", "Public Speaking", "Scientific Communication", "Scientific Writing", "Script Writing", "Technical Communication", "Technical Writing"],
+            "Media & Content": ["Adobe Premiere Pro", "Advertising", "Aerial Photography", "After Effects", "AI Content Creation", "Blogging", "Book Publishing", "Cinematography", "Content Creation", "Content Marketing", "DaVinci Resolve", "Digital Content Creation", "Digital Publishing", "E-Book Publishing", "Film Production", "Food Photography", "Photography", "Podcasting", "Public Relations", "Social Media", "Video Editing", "YouTube"],
+            "Research & Statistics": ["Data Classification", "Data Cleaning", "Data Collection", "Experimental Design", "Impact Evaluation", "Impact Measurement", "Literature Review", "Peer Review", "Polling Methodology", "Probability", "Psychological Statistics", "Public Opinion Research", "Qualitative Research", "Quantitative Research", "Research Design", "Research Documentation", "Research Ethics", "Research Methodology", "Research Methods", "Statistical Analysis", "Statistical Modeling", "Survey Design", "Survey Research"],
+            "Blockchain & Web3": ["Blockchain", "Blockchain Fundamentals", "Cryptocurrency", "Cryptocurrency Fundamentals", "Decentralized Applications", "DeFi-related development", "Digital Assets", "Ethereum", "Smart Contracts", "Solidity", "Vyper", "Web3"],
+            "Cloud / Enterprise / Business Technology": ["Airtable", "AppSheet", "Automation Anywhere", "Enterprise Architecture", "Enterprise Integration", "ERP", "IT Asset Management", "IT Service Management", "IT Strategy", "IT Support", "ITIL", "Microsoft Dynamics", "Oracle", "Power Apps", "Power Automate", "Retool", "Salesforce", "SAP", "Service Desk", "UiPath"]
+        };
+        const category = new URLSearchParams(location.search).get('category');
+        const title = document.getElementById('categoryTitle');
+        const count = document.getElementById('categoryCount');
+        const grid = document.getElementById('skillsGrid');
+
+        // Update page title and meta description dynamically for SEO
+        if (category && SKILLS_BY_CATEGORY[category]) {
+            document.title = category + ' Skills – Browse & Learn | GapVice';
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) metaDesc.setAttribute('content', 'Explore ' + SKILLS_BY_CATEGORY[category].length + ' skills in ' + category + ' on GapVice. Find curated learning resources, courses, and career guidance for each skill.');
+        }
+
+        if (category && SKILLS_BY_CATEGORY[category]) {
+            title.textContent = category;
+            count.textContent = SKILLS_BY_CATEGORY[category].length + ' skills';
+            SKILLS_BY_CATEGORY[category].forEach(skill => {
+                const a = document.createElement('a');
+                a.className = 'skill-card';
+                a.href = 'skill-resources.html?skill=' + encodeURIComponent(skill);
+                a.textContent = skill;
+                grid.appendChild(a);
+            });
+        } else {
+            title.textContent = 'Category Not Found';
+            count.textContent = '';
+        }
+    </script>
+</body>
+
+</html>

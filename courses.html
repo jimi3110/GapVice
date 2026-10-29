@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses &amp; Learning Resources – All Skill Categories | GapVice</title>
+  <meta name="description" content="Browse curated learning courses, tutorials, and certifications across 30+ skill categories including AI & ML, Programming, Data Science, Design, Finance, Healthcare, and more. Free on GapVice." />
+  <meta name="keywords" content="online courses, learning resources, skill tutorials, AI courses, programming courses, data science courses, career learning, GapVice courses" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="GapVice" />
+  <meta name="theme-color" content="#6366f1" />
+  <link rel="canonical" href="https://gapvice.netlify.app/courses.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="GapVice" />
+  <meta property="og:title" content="Courses &amp; Learning Resources – All Skill Categories | GapVice" />
+  <meta property="og:description" content="Browse curated learning resources across 30+ categories: AI & ML, Programming, Data Science, UX Design, Finance, Healthcare, and more." />
+  <meta property="og:url" content="https://gapvice.netlify.app/courses.html" />
+  <meta property="og:image" content="https://gapvice.netlify.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="GapVice – Browse Courses and Learning Resources" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@gapvice" />
+  <meta name="twitter:title" content="Courses &amp; Learning Resources | GapVice" />
+  <meta name="twitter:description" content="Curated free and paid courses across 30+ career skill categories. Find the best learning resources on GapVice." />
+  <meta name="twitter:image" content="https://gapvice.netlify.app/og-image.png" />
+  <meta name="twitter:image:alt" content="GapVice – Browse Courses and Learning Resources" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://gapvice.netlify.app/courses.html",
+    "name": "Courses & Learning Resources – GapVice",
+    "description": "Curated learning courses, tutorials, and certifications across 30+ skill categories for career development.",
+    "url": "https://gapvice.netlify.app/courses.html",
+    "isPartOf": { "@type": "WebSite", "@id": "https://gapvice.netlify.app/#website", "name": "GapVice", "url": "https://gapvice.netlify.app/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gapvice.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Courses & Learning Resources", "item": "https://gapvice.netlify.app/courses.html" }
+      ]
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>" />
+  <style>
+    .courses-page {
+      padding: 60px 0;
+      min-height: calc(100vh - 80px);
+    }
+
+    /* Search Bar */
+    .search-container {
+      max-width: 600px;
+      margin: 0 auto 20px auto;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 14px 20px 14px 45px;
+      font-size: 1.05rem;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-full);
+      background: var(--bg-card);
+      color: var(--text-primary);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.15);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      color: var(--text-muted);
+    }
+
+    /* Filter tabs for skills */
+    .skills-wrapper {
+      max-height: 400px;
+      overflow-y: auto;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: rgba(0, 0, 0, 0.01);
+      margin-bottom: 40px;
+    }
+
+    .skills-wrapper::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .skills-wrapper::-webkit-scrollbar-track {
+      background: var(--surface);
+      border-radius: 10px;
+    }
+
+    .skills-wrapper::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 10px;
+    }
+
+    .filter-tabs {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .filter-tab {
+      padding: 10px 22px;
+      border-radius: var(--radius-full, 50px);
+      border: 1.5px solid var(--border);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      background: var(--bg-card);
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .filter-tab:hover {
+      transform: translateY(-3px);
+      border-color: var(--primary);
+      color: var(--primary);
+      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.15);
+    }
+
+    .skill-category-section {
+      width: 100%;
+      margin-bottom: 28px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--bg-card);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .skill-category-header {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .skill-category-number {
+      width: 40px;
+      height: 40px;
+      flex: 0 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: var(--grad-primary);
+      color: #fff;
+      font-weight: 800;
+      font-size: .9rem;
+    }
+
+    .skill-category-title-wrap h3 {
+      margin: 0 0 3px;
+      color: var(--text-primary);
+      font-family: var(--font-display);
+      font-size: 1.12rem;
+      font-weight: 800;
+    }
+
+    .skill-category-title-wrap span {
+      color: var(--text-muted);
+      font-size: .78rem;
+      font-weight: 600;
+    }
+
+    .skill-category-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .skill-category-grid .filter-tab {
+      margin: 0;
+      padding: 6px 14px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      border-radius: 50px;
+    }
+
+    @media (max-width: 600px) {
+      .skill-category-section {
+        padding: 16px;
+      }
+    }
+
+    .no-results-msg {
+      text-align: center;
+      width: 100%;
+      padding: 30px;
+      color: var(--text-muted);
+      font-weight: 600;
+      display: none;
+    }
+
+    .category-search {
+      max-width: 700px;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 0 auto 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .category-search input {
+      flex: 1;
+      min-width: 0;
+      padding: 14px 18px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--bg-card);
+      color: var(--text-primary);
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .category-search input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, .12);
+    }
+
+    .category-search button {
+      padding: 14px 22px;
+      border: 0;
+      border-radius: 14px;
+      background: var(--grad-primary);
+      color: #fff;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .search-results {
+      max-width: 900px;
+      width: 100%;
+      box-sizing: border-box;
+      margin: -10px auto 28px;
+      display: none;
+    }
+
+    .search-results.active {
+      display: block;
+    }
+
+    .search-result-title {
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+
+    .search-result-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .search-result {
+      display: inline-flex;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg-card);
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .search-result:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .no-results {
+      color: var(--text-secondary);
+    }
+
+
+    .skill-suggestions {
+      max-width: 700px;
+      width: 100%;
+      box-sizing: border-box;
+      margin: -22px auto 28px;
+      display: none;
+      text-align: left;
+      position: relative;
+      z-index: 20;
+    }
+
+    .skill-suggestions.active {
+      display: block;
+    }
+
+    .skill-suggestion-list {
+      max-height: 280px;
+      overflow-y: auto;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--bg-card);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, .12);
+    }
+
+    .skill-suggestion {
+      display: block;
+      width: 100%;
+      padding: 12px 16px;
+      border: 0;
+      border-bottom: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-primary);
+      text-align: left;
+      cursor: pointer;
+      font-weight: 650;
+    }
+
+    .skill-suggestion:last-child {
+      border-bottom: 0;
+    }
+
+    .skill-suggestion:hover {
+      background: rgba(99, 102, 241, .08);
+      color: var(--primary);
+    }
+
+    .category-boxes-page {
+      padding: 120px 0 60px 0;
+      min-height: calc(100vh - 80px);
+    }
+
+    .category-boxes {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .category-box {
+      min-height: 120px;
+      padding: 20px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--bg-card);
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 800;
+      line-height: 1.3;
+      box-shadow: var(--shadow-sm);
+      transition: .25s ease;
+    }
+
+    .category-box:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+      color: var(--primary);
+      box-shadow: 0 12px 28px rgba(99, 102, 241, .16);
+    }
+
+    @media(max-width:1100px) {
+      .category-boxes {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media(max-width:850px) {
+      .category-boxes {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media(max-width:600px) {
+      .category-boxes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .category-box {
+        min-height: 75px;
+        padding: 12px 8px;
+        font-size: 0.82rem;
+        border-radius: var(--radius-md);
+      }
+    }
+  </style>
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">🎯</div>
+        <span>GapVice</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="courses.html" class="nav-link active">Courses</a>
+        <a href="roles.html" class="nav-link">Job Roles</a>
+        <a href="role-comparison.html" class="nav-link">Compare Roles</a>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-dark-mode theme-toggle-btn" id="themeToggle" title="Toggle dark mode" style="font-size: 1.2rem; display: flex; align-items: center;"><i class="ph ph-moon"></i></button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="mobile-nav-link"><i class="ph ph-house"></i> Home</a>
+    <a href="roles.html" class="mobile-nav-link"><i class="ph ph-briefcase"></i> Job Roles</a>
+    <a href="role-comparison.html" class="mobile-nav-link"><i class="ph ph-scales"></i> Compare Roles</a>
+    <a href="courses.html" class="mobile-nav-link"><i class="ph ph-books"></i> Courses</a>
+    <button class="mobile-nav-link theme-toggle-btn mobile-theme-toggle" style="background:none; border:none; width:100%; text-align:left; font:inherit; color:inherit; cursor:pointer; padding:15px 20px; display:flex; align-items:center; gap:10px;"></button>
+  </div>
+
+  <main class="category-boxes-page">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:30px;">
+        <h1 class="section-title" style="margin: 0 auto;">Explore <span class="text-gradient">Learning Courses</span></h1>
+        <p class="section-desc" style="margin:10px auto;">Select any skill below to discover curated courses and learning resources.</p>
+        <div class="category-search">
+          <input type="text" id="skillSearch" placeholder="Search any skill..." autocomplete="off">
+          <button type="button" id="searchSkillBtn">Search</button>
+        </div>
+        <div id="skillSuggestions" class="skill-suggestions">
+          <div id="skillSuggestionList" class="skill-suggestion-list"></div>
+        </div>
+        <div id="searchResults" class="search-results">
+          <div class="search-result-title">Matching Skills</div>
+          <div id="searchResultList" class="search-result-list"></div>
+        </div>
+      </div>
+
+      <div id="allSkillsContainer" style="display:flex; flex-direction:column; gap:20px; align-items:flex-start;"></div>
+    </div>
+  </main>
+
+  <!--  FOOTER  -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-conditions.html">Terms &amp; Conditions</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+      </div>
+      <div class="footer-copy"> 2026 GapVice. All rights reserved. Made by JT6 Productions</div>
+    </div>
+  </footer>
+
+  <script src="app.js?v=2"></script>
+  <script>
+    const SKILLS_BY_CATEGORY = {
+      "AI & Machine Learning": ["AI Agents", "AI Auditing", "AI Automation", "AI Ethics", "AI Evaluation", "AI Governance", "AI Research", "AI Safety", "Artificial Intelligence", "Computer Vision", "Deep Learning", "Explainable AI", "Feature Engineering", "Game AI", "Generative AI", "Large Language Models (LLMs)", "LLM Applications", "Machine Learning", "Mathematics for Machine Learning", "MLOps", "Model Deployment", "Natural Language Processing", "Prompt Engineering", "PyTorch", "Reinforcement Learning", "Responsible AI", "Retrieval-Augmented Generation", "Supervised Learning", "TensorFlow", "Unsupervised Learning"],
+      "Programming Languages": ["ABAP", "Apex", "Assembly", "Bash", "C", "C#", "C++", "Clojure", "COBOL", "D", "Dart", "Elixir", "Erlang", "F#", "Fortran", "Go", "Haskell", "Java", "JavaScript", "Julia", "Kotlin", "Lua", "MATLAB", "Move", "Objective-C", "Perl", "PHP", "PowerShell", "Python", "R", "Ruby", "Rust", "Scala", "Solidity", "Swift", "TypeScript", "Visual Basic", "Vyper"],
+      "Computer Science & Algorithms": ["Advanced Graph Algorithms", "Algorithms", "Arrays", "Binary Search Trees", "CAP Theorem", "Competitive Programming", "Compiler Design", "Complexity / Scalability", "Data Structures", "Design & Analysis of Algorithms", "Discrete Mathematics", "Divide & Conquer", "Dynamic Programming", "Graph Theory", "Graphs", "Greedy Algorithms", "Hash Tables", "Heaps", "Linked Lists", "Logic", "Number Theory", "Recursion & Backtracking", "Searching Algorithms", "Sorting Algorithms", "Stacks & Queues", "Theory of Computation", "Trees"],
+      "Software Development": ["Clean Code", "Code Review", "Debugging", "Design Patterns", "Developer Experience", "Developer Tools", "Functional Programming", "Git & GitHub", "GitHub Actions", "High-Level Design", "Low-Level Design", "Object-Oriented Programming", "Open Source Development", "Refactoring", "Requirements Engineering", "Software Architecture", "Software Design", "Software Development Life Cycle (SDLC)", "Software Engineering", "System Architecture", "System Design", "System Design Fundamentals", "System Design Interview", "Version Control"],
+      "Web & App Development": ["Android Development", "Android Development with Java", "API Development", "CSS", "Express.js", "Flutter", "Full-Stack Development", "GraphQL", "HTML", "iOS Development", "JavaScript", "Next.js", "Node.js", "Progressive Web Apps", "React Native", "React.js", "Responsive Web Design", "REST APIs", "Shopify", "UI Design", "Web Accessibility", "Webflow", "Wix", "WooCommerce", "WordPress"],
+      "Data Science & Analytics": ["Creator Analytics", "Customer Analytics", "Data Analysis", "Data Science", "Data Visualization", "Exploratory Data Analysis", "Financial Analytics", "Forecasting", "Healthcare Analytics", "HR Analytics", "Marketing Analytics", "Matplotlib", "NumPy", "Operations Analytics", "Pandas", "Power BI", "Predictive Analytics", "Prescriptive Analytics", "Probability", "Product Analytics", "Python for Data Analysis", "Python for Data Science", "Python Scientific Computing", "Real Estate Analytics", "Sales Analytics", "Statistical Analysis", "Statistical Modeling", "Supply Chain Analytics", "Tableau", "Time-Series Analysis"],
+      "Databases & Data Engineering": ["Apache Spark", "Big Data", "Data Engineering", "Data Modeling", "Data Pipelines", "Data Warehousing", "Database Administration", "Database Design", "Database Management Systems", "Database Normalization", "Database Scaling", "ETL", "Metadata", "Metadata Management", "MongoDB", "MySQL", "NoSQL Databases", "Oracle", "PL/SQL", "PostgreSQL", "Query Optimization", "Redis", "SQL", "SQL for Data Analysis", "T-SQL"],
+      "Cloud & DevOps": ["Ansible", "AWS", "CI/CD", "Cloud Architecture", "Cloud Computing", "Cloud Cost Management", "Cloud Governance", "Cloud Migration", "Cloud Networking", "Cloud Security", "Cloud Storage", "Docker", "Embedded Linux", "FinOps", "Google Cloud", "Grafana", "Hybrid Cloud", "Infrastructure as Code", "Jenkins", "Kubernetes", "Linux", "Linux Administration", "Load Balancing", "Microsoft Azure", "Monitoring & Logging", "Multi-Cloud", "Prometheus", "Serverless Architecture", "Site Reliability Engineering", "Terraform"],
+      "Cybersecurity": ["Authentication & Authorization", "Capture the Flag (CTF)", "Cryptography", "Cyber Forensics", "Cyber Law", "Cyber Risk", "Cybersecurity Audit", "Cybersecurity Fundamentals", "Digital Forensics", "Embedded Security", "Ethical Hacking", "Identity & Access Management", "Incident Response", "Information Security", "IoT Security", "Malware Analysis", "Network Security", "OWASP Top 10", "Penetration Testing", "Quantum Cryptography", "Secure Coding", "Security Awareness", "Security Operations / SOC", "Security Tools", "SIEM", "Threat Intelligence", "Vulnerability Assessment", "Web Application Security", "Web Security"],
+      "Networking": ["4G", "5G", "6G", "Communication Systems", "Computer Networking", "Computer Networks", "Fiber Optics", "Network Engineering", "Network Optimization", "Network Planning", "Network Security", "Network Troubleshooting", "Optical Communication", "Satellite Communication", "Telecommunications", "VoIP", "Wireless Communication"],
+      "Embedded Systems & IoT": ["Agricultural IoT", "Arduino", "CAN Bus", "Embedded C", "Embedded C++", "Embedded Systems", "ESP32", "Firmware Development", "HMI", "I2C", "Industrial Automation", "Industrial IoT", "Internet of Things (IoT)", "IoT", "IoT Architecture", "IoT Cloud Platforms", "Microcontrollers", "Microprocessors", "MQTT", "PLC", "Raspberry Pi", "RTOS", "SCADA", "Sensors", "Smart Home", "Smart Infrastructure", "SPI", "UART"],
+      "Robotics & Automation": ["Agricultural Drones", "Agricultural Robotics", "Automation Anywhere", "Autonomous Drones", "Drone Electronics", "Drone Inspection", "Drone Mapping", "Drone Piloting", "Drone Programming", "Factory Automation", "Industrial Robotics", "Intelligent Automation", "Medical Robotics", "Motion Control", "No-Code Automation", "Power Automate", "Robotic Process Automation", "Robotics", "UAV Maintenance", "UAV Systems", "UiPath", "Vehicle Control Systems", "Workflow Automation", "Zapier", "Zapier Automation"],
+      "UI/UX & Product Design": ["Accessibility Design", "Accessibility Testing", "Accessible Product Design", "AI Workflow Design", "AR/VR UI/UX", "Design Systems", "Design Thinking", "Figma", "Framer", "Human-Computer Interaction", "Information Architecture", "Interaction Design", "Product Design", "Product Discovery", "Product Management", "Product Strategy", "Product Testing", "Product-Market Fit", "Prototyping", "UI Design", "Universal Design", "User Research", "UX Design", "UX Research", "Wireframing"],
+      "Graphic & Visual Design": ["2D Animation", "3D Animation", "Adobe Illustrator", "Adobe Photoshop", "Animation", "Book Design", "Branding", "Cataloguing", "Character Animation", "Character Design", "Compositing", "Concept Art", "Digital Art", "Digital Illustration", "Graphic Design", "Illustration", "InDesign", "Motion Graphics", "Personal Branding", "Rendering", "Storyboarding", "Texturing", "Typography", "VFX", "Visual Development"],
+      "3D, Game & XR": ["3D Mathematics", "3D Modeling", "Augmented Reality", "Blender", "Cinema 4D", "Game AI", "Game Development Fundamentals", "Game Physics", "GDScript", "Houdini", "Maya", "Metaverse Development", "Mixed Reality", "Spatial Computing", "Unity", "Unreal Engine", "Virtual Reality", "XR Development"],
+      "Business & Management": ["Business Analysis", "Business Communication", "Business Development", "Business Management", "Business Planning", "Business Process Automation", "Business Process Management", "Business Strategy", "Change Management", "Knowledge Management", "Leadership", "Management Consulting", "Negotiation", "Operations Consulting", "Operations Management", "Program Management", "Project Management", "Quality Management", "Risk Management", "Strategic Management", "Strategy Consulting", "Technology Consulting", "Time Management"],
+      "Marketing & Sales": ["Account Management", "Affiliate Marketing", "B2B Sales", "B2C Sales", "Brand Management", "Brand Strategy", "Content Marketing", "Conversion Rate Optimization", "CRM", "Customer Experience", "Customer Insights", "Customer Journey Mapping", "Customer Success Management", "Digital Marketing", "Email Marketing", "Enterprise Sales", "Google Ads", "Influencer Marketing", "Lead Generation", "Market Analysis", "Market Research", "Market Segmentation", "Media Buying", "Media Planning", "Meta Ads", "Sales Management", "Sales Operations", "Salesforce", "Search Engine Marketing (SEM)", "Search Engine Optimization (SEO)", "Social Media Marketing"],
+      "Finance & Accounting": ["Asset Management", "Auditing", "Capital Markets", "Corporate Finance", "Cost Accounting", "Derivatives", "Equity Research", "External Auditing", "Financial Accounting", "Financial Analysis", "Financial Analytics", "Financial Audit", "Financial Mathematics", "Financial Modeling", "Financial Reporting", "Financial Risk", "Fixed Income", "Foreign Exchange", "Forensic Audit", "Fundamental Analysis", "Futures", "Internal Auditing", "Investment Analysis", "Investment Banking", "Management Accounting", "Options Trading", "Portfolio Management", "Private Equity", "Quantitative Finance", "Startup Finance", "Stock Market", "Tax Accounting", "Taxation", "Technical Analysis", "Treasury Management", "Venture Capital", "Wealth Management"],
+      "Entrepreneurship & Startups": ["Business Model Design", "Cap Tables", "Competitive Analysis", "Competitive Intelligence", "Customer Discovery", "Deal Structuring", "Due Diligence", "Entrepreneurship", "Fundraising", "Lean Startup", "Product-Market Fit", "Startup Finance", "Startup Management", "Startup Marketing", "Term Sheets", "Venture Capital"],
+      "Supply Chain & Operations": ["Cold Chain Logistics", "E-Commerce Logistics", "Facility Layout", "Facility Management", "Freight Forwarding", "Inventory Forecasting", "Inventory Management", "Last-Mile Delivery", "Lean Manufacturing", "Logistics & Freight", "Manufacturing Processes", "Manufacturing QA", "Network Optimization", "Operations Research", "Process Improvement", "Process Mining", "Process Optimization", "Procurement Analytics", "Production Engineering", "Production Planning", "Route Optimization", "Six Sigma", "Supply Chain", "Supply Chain Analytics", "Supply Chain Management", "Sustainable Supply Chains", "Transportation Planning", "Warehouse Automation"],
+      "Engineering & Electronics": ["Analog Electronics", "Analog IC Design", "Circuit Theory", "Control Systems", "Digital Electronics", "Digital IC Design", "Electrical Engineering", "Electrical Machines", "Electromagnetism", "Electronics", "FPGA", "IC Design", "Instrumentation", "MEMS", "Microwave Engineering", "Optoelectronics", "PCB Design", "Physical Design", "Power Electronics", "Power Systems", "RF Engineering", "Semiconductor Engineering", "Semiconductor Fabrication", "Semiconductor Manufacturing", "Semiconductor Packaging", "Semiconductor Physics", "Signals & Systems", "SystemVerilog", "Verilog", "VLSI", "VLSI Design"],
+      "Mechanical / Civil / Industrial Engineering": ["ANSYS", "AutoCAD", "BIM", "CATIA", "Civil Engineering", "Computational Fluid Dynamics", "Engineering Drawing", "ETABS", "Finite Element Analysis", "Fluid Mechanics", "Geotechnical Engineering", "Heat Transfer", "Hydraulics", "Industrial Engineering", "Machine Design", "Material Testing", "MATLAB", "Mechanical Engineering", "Process Engineering", "Revit", "Simulink", "Soil Mechanics", "SolidWorks", "STAAD.Pro", "Strength of Materials", "Structural Analysis", "Structural Engineering", "Thermodynamics"],
+      "Aerospace & Space": ["Aerodynamics", "Aerospace Engineering", "Aircraft Maintenance", "Aircraft Structures", "Astronomy", "Astrophysics", "Avionics", "Flight Control", "Flight Mechanics", "Flight Operations", "Launch Vehicle Engineering", "Orbital Mechanics", "Planetary Science", "Propulsion", "Rocket Propulsion", "Rocket Science", "Satellite Engineering", "Satellite Technology", "Space Law", "Space Medicine", "Space Policy", "Space Systems Engineering"],
+      "Environment & Sustainability": ["Biofuels", "Biomass Energy", "Circular Economy", "Climate Policy", "Climate Science", "Corporate Sustainability", "Energy Storage", "Environmental Engineering", "Environmental Impact Assessment", "Environmental Law", "Environmental Management", "Environmental Policy", "Environmental Science", "ESG", "Geothermal Energy", "Hydrogen Energy", "Hydropower", "Life Cycle Assessment", "Recycling", "Renewable Energy", "Solar Energy", "Solar PV", "Solar Thermal", "Sustainable Development", "Waste Management", "Water Infrastructure", "Water Quality", "Water Treatment", "Wind Energy"],
+      "Agriculture": ["Agricultural Biotechnology", "Agricultural Drones", "Agricultural Engineering", "Agricultural IoT", "Agricultural Robotics", "Agronomy", "Aquaculture", "Beekeeping", "Crop Management", "Crop Monitoring", "Dairy Farming", "Digital Agriculture", "Farm Analytics", "Farm Management", "Fisheries Science", "Floriculture", "Forestry", "Horticulture", "Hydroponics", "Irrigation", "Mushroom Cultivation", "Organic Farming", "Plant Pathology", "Poultry Farming", "Precision Agriculture", "Smart Agriculture", "Soil Science", "Wildlife Conservation"],
+      "Healthcare & Life Sciences": ["Assistive Technology", "Bioinformatics", "Biomedical Engineering", "Biotechnology", "Clinical Laboratory Science", "Clinical Nutrition", "Clinical Psychology", "Cognitive Psychology", "Computational Biology", "Digital Health", "Epidemiology", "Genetics", "Genomics", "Health Informatics", "Healthcare", "Healthcare IT", "Healthcare Management", "Healthcare Operations", "Immunology", "Medical Imaging", "Medical Laboratory Techniques", "Medical Robotics", "Microbiology", "Molecular Biology", "Neuroscience", "Nutrition", "Pharmacology", "Proteomics", "Psychology", "Public Health", "Rehabilitation Technology", "Telemedicine"],
+      "Law, Policy & Governance": ["AI Governance", "AI Regulation", "Constitutional Law", "Contract Law", "Contract Negotiation", "Copyright Law", "Corporate Governance", "Corporate Law", "Criminal Law", "Cyber Law", "Economic Policy", "Foreign Policy", "Governance", "Information Governance", "Intellectual Property Law", "International Law", "IT Governance", "Law", "Legal & Compliance", "Legal Operations", "Legal Research", "Maritime Law", "Model Governance", "Patent Law", "Policy Analysis", "Policy Research", "Public Policy", "Regulatory Compliance", "Space Law", "Tax Law", "Trademark Law"],
+      "Communication & Writing": ["Academic Writing", "Business Communication", "Communication Skills", "Copy Editing", "Copywriting", "Corporate Communications", "Creative Writing", "Crisis Communication", "English Communication", "Grant Writing", "Legal Writing", "Presentation Skills", "Professional Writing", "Proofreading", "Proposal Writing", "Public Speaking", "Scientific Communication", "Scientific Writing", "Script Writing", "Technical Communication", "Technical Writing"],
+      "Media & Content": ["Adobe Premiere Pro", "Advertising", "Aerial Photography", "After Effects", "AI Content Creation", "Blogging", "Book Publishing", "Cinematography", "Content Creation", "Content Marketing", "DaVinci Resolve", "Digital Content Creation", "Digital Publishing", "E-Book Publishing", "Film Production", "Food Photography", "Photography", "Podcasting", "Public Relations", "Social Media", "Video Editing", "YouTube"],
+      "Research & Statistics": ["Data Classification", "Data Cleaning", "Data Collection", "Experimental Design", "Impact Evaluation", "Impact Measurement", "Literature Review", "Peer Review", "Polling Methodology", "Probability", "Psychological Statistics", "Public Opinion Research", "Qualitative Research", "Quantitative Research", "Research Design", "Research Documentation", "Research Ethics", "Research Methodology", "Research Methods", "Statistical Analysis", "Statistical Modeling", "Survey Design", "Survey Research"],
+      "Blockchain & Web3": ["Blockchain", "Blockchain Fundamentals", "Cryptocurrency", "Cryptocurrency Fundamentals", "Decentralized Applications", "DeFi-related development", "Digital Assets", "Ethereum", "Smart Contracts", "Solidity", "Vyper", "Web3"],
+      "Cloud / Enterprise / Business Technology": ["Airtable", "AppSheet", "Automation Anywhere", "Enterprise Architecture", "Enterprise Integration", "ERP", "IT Asset Management", "IT Service Management", "IT Strategy", "IT Support", "ITIL", "Microsoft Dynamics", "Oracle", "Power Apps", "Power Automate", "Retool", "Salesforce", "SAP", "Service Desk", "UiPath"]
+    };
+
+    const allSkillsContainer = document.getElementById('allSkillsContainer');
+    const skillSearch = document.getElementById('skillSearch');
+    const searchSkillBtn = document.getElementById('searchSkillBtn');
+    const searchResults = document.getElementById('searchResults');
+    const searchResultList = document.getElementById('searchResultList');
+    const skillSuggestions = document.getElementById('skillSuggestions');
+    const skillSuggestionList = document.getElementById('skillSuggestionList');
+
+    const COLOR_PALETTE = ['#6366f1', '#a855f7', '#ec4899', '#06b6d4', '#10b981', '#f59e0b', '#ef4444', '#f97316'];
+
+    let categoryCounter = 1;
+    Object.entries(SKILLS_BY_CATEGORY).forEach(([category, skills]) => {
+      const color = COLOR_PALETTE[(categoryCounter - 1) % COLOR_PALETTE.length];
+
+      const section = document.createElement('div');
+      section.className = 'skill-category-section reveal';
+      section.style.borderTop = `4px solid ${color}`;
+      section.onmouseenter = () => section.style.boxShadow = `0 12px 35px ${color}15`;
+      section.onmouseleave = () => section.style.boxShadow = '';
+
+      const header = document.createElement('div');
+      header.className = 'skill-category-header';
+      header.innerHTML = `
+        <div class="skill-category-number" style="background: ${color}; box-shadow: 0 4px 15px ${color}44;">${categoryCounter}</div>
+        <div class="skill-category-title-wrap">
+          <h3 style="color: ${color};">${category}</h3>
+          <span>${skills.length} Skills</span>
+        </div>
+      `;
+      section.appendChild(header);
+
+      const grid = document.createElement('div');
+      grid.className = 'skill-category-grid';
+
+      skills.forEach(skill => {
+        const link = document.createElement('a');
+        link.className = 'filter-tab';
+        link.href = 'skill-resources.html?skill=' + encodeURIComponent(skill);
+        link.textContent = skill;
+        // Apply color on hover with JS
+        link.onmouseenter = () => {
+           link.style.borderColor = color;
+           link.style.color = color;
+           link.style.backgroundColor = `${color}11`;
+           link.style.transform = 'translateY(-3px)';
+        };
+        link.onmouseleave = () => {
+           link.style.borderColor = '';
+           link.style.color = '';
+           link.style.backgroundColor = '';
+           link.style.transform = '';
+        };
+        grid.appendChild(link);
+      });
+
+      section.appendChild(grid);
+      allSkillsContainer.appendChild(section);
+      categoryCounter++;
+    });
+
+    const allSkills = [];
+    Object.entries(SKILLS_BY_CATEGORY).forEach(([category, skills]) => {
+      skills.forEach(skill => {
+        allSkills.push({ skill, category });
+      });
+    });
+
+    function showSuggestions() {
+      const query = skillSearch.value.trim().toLowerCase();
+
+      skillSuggestionList.innerHTML = '';
+
+      if (!query) {
+        skillSuggestions.classList.remove('active');
+        return;
+      }
+
+      // Only suggest skills whose names START with the letters typed.
+      const matches = allSkills
+        .filter(item => item.skill.toLowerCase().startsWith(query))
+        .slice(0, 10);
+
+      if (!matches.length) {
+        skillSuggestions.classList.remove('active');
+        return;
+      }
+
+      matches.forEach(({ skill, category }) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'skill-suggestion';
+        button.textContent = skill;
+        button.title = category;
+
+        button.addEventListener('click', () => {
+          window.location.href =
+            'skill-resources.html?skill=' + encodeURIComponent(skill);
+        });
+
+        skillSuggestionList.appendChild(button);
+      });
+
+      skillSuggestions.classList.add('active');
+    }
+
+    function searchSkills() {
+      const query = skillSearch.value.trim().toLowerCase();
+
+      skillSuggestions.classList.remove('active');
+      searchResultList.innerHTML = '';
+
+      if (!query) {
+        searchResults.classList.remove('active');
+        return;
+      }
+
+      const matches = allSkills.filter(item =>
+        item.skill.toLowerCase().includes(query)
+      );
+
+      if (!matches.length) {
+        searchResultList.innerHTML =
+          '<span class="no-results">No matching skill found.</span>';
+      } else {
+        matches.forEach(({ skill, category }) => {
+          const link = document.createElement('a');
+          link.className = 'search-result';
+          link.href =
+            'skill-resources.html?skill=' + encodeURIComponent(skill);
+          link.textContent = skill;
+          link.title = 'Category: ' + category;
+          searchResultList.appendChild(link);
+        });
+      }
+
+      searchResults.classList.add('active');
+    }
+
+    skillSearch.addEventListener('input', showSuggestions);
+    searchSkillBtn.addEventListener('click', searchSkills);
+
+    skillSearch.addEventListener('keydown', event => {
+      if (event.key === 'Enter') {
+        searchSkills();
+      }
+
+      if (event.key === 'Escape') {
+        skillSuggestions.classList.remove('active');
+      }
+    });
+
+    document.addEventListener('click', event => {
+      if (!event.target.closest('.category-search') &&
+        !event.target.closest('.skill-suggestions')) {
+        skillSuggestions.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GapVice – AI Career Gap Analyzer & Skill Assessment Tool</title>
+  <meta name="description"
+    content="GapVice is a free AI-powered career platform. Evaluate your job readiness, identify skill gaps, compare career paths, and get a personalized learning roadmap for 96+ job roles." />
+  <meta name="keywords"
+    content="career gap analysis, skill gap tool, job readiness, career assessment, job role comparison, skill assessment, AI career tool, learning roadmap, GapVice" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="GapVice" />
+  <link rel="canonical" href="https://gapvice.netlify.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="GapVice" />
+  <meta property="og:title" content="GapVice – AI Career Gap Analyzer & Skill Assessment Tool" />
+  <meta property="og:description"
+    content="Discover how well your skills match your dream job role. Get a detailed gap analysis, compare career paths, and get personalised resource recommendations — all for free." />
+  <meta property="og:url" content="https://gapvice.netlify.app/" />
+  <meta property="og:image" content="https://gapvice.netlify.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="GapVice – AI Career Gap Analyzer and Skill Assessment Tool" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@gapvice" />
+  <meta name="twitter:title" content="GapVice – AI Career Gap Analyzer & Skill Assessment Tool" />
+  <meta name="twitter:description"
+    content="Free AI-powered career readiness tool. Analyze your skills, compare job roles, and build your personalized learning roadmap." />
+  <meta name="twitter:image" content="https://gapvice.netlify.app/og-image.png" />
+  <meta name="twitter:image:alt" content="GapVice – AI Career Gap Analyzer and Skill Assessment Tool" />
+
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#6366f1" />
+  <link rel="apple-touch-icon" href="https://gapvice.netlify.app/og-image.png" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://gapvice.netlify.app/#website",
+        "name": "GapVice",
+        "url": "https://gapvice.netlify.app/",
+        "description": "AI-powered career gap analysis and skill assessment platform for 96+ job roles.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://gapvice.netlify.app/roles.html?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://gapvice.netlify.app/#organization",
+        "name": "GapVice",
+        "url": "https://gapvice.netlify.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://gapvice.netlify.app/og-image.png",
+          "width": 1200,
+          "height": 630
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "jimitiwari9@gmail.com",
+          "contactType": "Customer Support"
+        },
+        "sameAs": []
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://gapvice.netlify.app/#webpage",
+        "url": "https://gapvice.netlify.app/",
+        "name": "GapVice – AI Career Gap Analyzer & Skill Assessment Tool",
+        "description": "GapVice is a free AI-powered career platform. Evaluate your job readiness, identify skill gaps, compare career paths, and get a personalized learning roadmap for 96+ job roles.",
+        "isPartOf": { "@id": "https://gapvice.netlify.app/#website" },
+        "publisher": { "@id": "https://gapvice.netlify.app/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is GapVice free to use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, GapVice is completely free. You can analyze your skill gaps, compare job roles, and access learning resources without any account or payment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How accurate is the AI skill gap analysis?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GapVice achieves up to 95% accuracy by comparing your stated skill proficiency levels against curated skill requirements for each of the 96+ supported job roles."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a job readiness score?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your job readiness score is a percentage that reflects how well your current skills match the requirements of your selected job role. A higher score means you are closer to being fully job-ready."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need an account to use GapVice?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No account is required. GapVice works entirely in your browser and stores your session data locally, so you can start your skill gap analysis immediately."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+  <!--  NAVBAR  -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">🎯</div>
+        <span>GapVice </span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="courses.html" class="nav-link">Courses</a>
+
+        <a href="roles.html" class="nav-link">Job Roles</a>
+        <a href="role-comparison.html" class="nav-link">Compare Roles</a>
+
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-dark-mode theme-toggle-btn" id="themeToggle" title="Toggle dark mode"
+          style="font-size: 1.2rem; display: flex; align-items: center; background: none; border: none; cursor: pointer; color: inherit;"></button>
+        <a href="#contact" class="btn btn-primary btn-sm hidden-mobile">Contact Us</a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="mobile-nav-link"> Home</a>
+    <a href="courses.html" class="mobile-nav-link"> Courses</a>
+
+    <a href="roles.html" class="mobile-nav-link"> Job Roles</a>
+    <a href="role-comparison.html" class="mobile-nav-link"> Compare Roles</a>
+    <a href="#how-it-works" class="mobile-nav-link"> How It Works</a>
+    <a href="#contact" class="mobile-nav-link"> Contact Us</a>
+    <button class="mobile-nav-link theme-toggle-btn mobile-theme-toggle"
+      style="background:none; border:none; width:100%; text-align:left; font:inherit; color:inherit; cursor:pointer; padding:15px 20px; display:flex; align-items:center; gap:10px;"></button>
+  </div>
+
+  <!--  HERO  -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <canvas id="particles-canvas"></canvas>
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+      <div class="hero-blob hero-blob-3"></div>
+      <div class="hero-blob hero-blob-4"></div>
+      <div class="hero-blob hero-blob-5"></div>
+      <div class="hero-blob hero-blob-6"></div>
+      <div class="hero-grid-pattern"></div>
+    </div>
+
+    <div class="hero-content">
+      <!-- Left Column -->
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span class="dot"
+            style="background:var(--yellow);box-shadow:0 0 8px var(--yellow-light);animation:pulse 1.8s infinite;"></span>
+          <span style="color:var(--yellow);font-size:.9rem;line-height:1;">★</span> Coffee • Code • Create
+        </div>
+        <h1 class="hero-title" id="dynamicHeroTitle">
+          Master Your <span class="text-gradient">Career Journey</span><br />Instantly
+        </h1>
+        <p class="hero-desc" id="dynamicHeroDesc">
+          Discover how well your skills match your dream role, compare career paths, and analyze your resume. Get a
+          detailed gap analysis, personalized learning roadmap, and curated resources!
+        </p>
+        <div class="hero-actions">
+          <a href="get-started.html" class="btn btn-primary btn-lg" id="cta-hero">
+            Get Started
+          </a>
+          <a href="#how-it-works" class="btn btn-secondary btn-lg">
+            See How It Works
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-value" id="dynamicHeroStatStudents" data-target="5000" data-suffix="+"
+              data-format="k">0</div>
+            <div class="hero-stat-label">Students Helped</div>
+          </div>
+          <div style="width:1px;background:var(--border)"></div>
+          <div>
+            <div class="hero-stat-value" id="dynamicHeroStatRoles" data-target="96" data-suffix="+">0</div>
+            <div class="hero-stat-label">Job Roles</div>
+          </div>
+          <div style="width:1px;background:var(--border)"></div>
+          <div>
+            <div class="hero-stat-value" id="dynamicHeroStatAccuracy" data-target="95" data-suffix="%">0</div>
+            <div class="hero-stat-label">Accuracy Rate</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column - Visual -->
+      <div class="hero-visual">
+        <!-- Float card top-right -->
+        <div class="hero-card-float hero-card-float-1">
+          <div
+            style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#10b981,#06b6d4);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">
+          </div>
+          <div>
+            <div style="font-size:.8rem;font-weight:700;">Match Found!</div>
+            <div style="font-size:.75rem;color:var(--text-muted);">Data Scientist 84%</div>
+          </div>
+        </div>
+
+        <!-- Main Card -->
+        <div class="hero-card-main">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+            <div
+              style="width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,#6366f1,#a855f7);display:flex;align-items:center;justify-content:center;font-size:1.2rem;">
+            </div>
+            <div>
+              <div style="font-weight:700;font-size:.95rem;">Software Developer</div>
+              <div style="font-size:.78rem;color:var(--text-muted);">Skill Analysis Report</div>
+            </div>
+            <div style="margin-left:auto;display:flex;gap:6px;align-items:center;">
+              <div class="badge badge-success">Live</div>
+              <div class="badge badge-yellow" style="font-size:.68rem;">⭐ Top</div>
+            </div>
+          </div>
+
+          <!-- Mini circular score -->
+          <div style="text-align:center;margin:16px 0 20px;">
+            <svg width="120" height="120" viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="50" fill="none" stroke="var(--surface)" stroke-width="8" />
+              <circle cx="60" cy="60" r="50" fill="none" stroke="url(#heroGrad)" stroke-width="8" stroke-linecap="round"
+                stroke-dasharray="314" stroke-dashoffset="75" transform="rotate(-90 60 60)" />
+              <defs>
+                <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#6366f1" />
+                  <stop offset="100%" stop-color="#a855f7" />
+                </linearGradient>
+              </defs>
+              <text x="60" y="55" text-anchor="middle" font-size="22" font-weight="800" fill="var(--text-primary)"
+                font-family="'Plus Jakarta Sans',sans-serif">76%</text>
+              <text x="60" y="72" text-anchor="middle" font-size="9" fill="var(--text-muted)"
+                font-family="Inter,sans-serif">MATCH SCORE</text>
+            </svg>
+          </div>
+
+          <!-- Skill bars -->
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:5px;"><span
+                  style="font-weight:600;">Python</span><span
+                  style="color:var(--success);font-weight:700;">Advanced</span></div>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar-fill" style="width:88%;background:linear-gradient(90deg,#10b981,#06b6d4);">
+                </div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:5px;"><span
+                  style="font-weight:600;">Data Structures</span><span
+                  style="color:var(--primary);font-weight:700;">Intermediate</span></div>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar-fill" style="width:60%;"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:5px;"><span
+                  style="font-weight:600;">System Design</span><span
+                  style="color:var(--warning);font-weight:700;">Weak</span></div>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar-fill" style="width:30%;background:linear-gradient(90deg,#f59e0b,#ef4444);">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Float card bottom-left -->
+        <div class="hero-card-float hero-card-float-2"
+          style="border-color:rgba(234,179,8,.3);box-shadow:0 8px 24px rgba(234,179,8,.15);">
+          <div style="font-size:1.3rem;color:var(--yellow);text-shadow:0 0 10px rgba(250,204,21,.5);">★</div>
+          <div>
+            <div style="font-size:.78rem;font-weight:700;">3 Resources Found</div>
+            <div style="font-size:.72rem;color:var(--text-muted);">Tailored for you</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Yellow accent divider -->
+  <div
+    style="height:3px;background:linear-gradient(90deg,transparent,rgba(234,179,8,.5),rgba(250,204,21,.4),transparent);width:100%;display:block;">
+  </div>
+
+  <!--  QUICK QUESTIONS  -->
+  <section class="section faq-section">
+    <div class="container">
+      <div class="faq-bar" style="border-top:2px solid rgba(234,179,8,.25);">
+        <div class="faq-header">⚡ Quick Questions?
+        </div>
+        <div class="faq-pill-container">
+          <div class="faq-pill"
+            onmouseover="this.style.borderColor='#6366f1';this.style.color='#6366f1';this.style.transform='translateY(-3px)';this.style.boxShadow='0 4px 14px rgba(99,102,241,.2)'"
+            onmouseout="this.style.borderColor='';this.style.color='';this.style.transform='';this.style.boxShadow=''"
+            onclick="showFAQ('free')">
+            Is it free? </div>
+          <div class="faq-pill"
+            onmouseover="this.style.borderColor='#a855f7';this.style.color='#a855f7';this.style.transform='translateY(-3px)';this.style.boxShadow='0 4px 14px rgba(168,85,247,.2)'"
+            onmouseout="this.style.borderColor='';this.style.color='';this.style.transform='';this.style.boxShadow=''"
+            onclick="showFAQ('accuracy')">
+            How accurate is AI? </div>
+          <div class="faq-pill"
+            onmouseover="this.style.borderColor='#10b981';this.style.color='#10b981';this.style.transform='translateY(-3px)';this.style.boxShadow='0 4px 14px rgba(16,185,129,.2)'"
+            onmouseout="this.style.borderColor='';this.style.color='';this.style.transform='';this.style.boxShadow=''"
+            onclick="showFAQ('score')">
+            Readiness score? </div>
+          <div class="faq-pill"
+            onmouseover="this.style.borderColor='#06b6d4';this.style.color='#06b6d4';this.style.transform='translateY(-3px)';this.style.boxShadow='0 4px 14px rgba(6,182,212,.2)'"
+            onmouseout="this.style.borderColor='';this.style.color='';this.style.transform='';this.style.boxShadow=''"
+            onclick="showFAQ('account')">
+            Do I need an account? </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--  HOW IT WORKS  -->
+  <section class="section how-works-section" id="how-it-works" style="background:var(--bg);">
+    <div class="container">
+      <div class="how-it-works-grid">
+        <div>
+          <div class="section-label section-label-yellow reveal">Simple Process</div>
+          <h2 class="section-title reveal animate-delay-1" style="white-space:nowrap;">Get Your Results in <span
+              class="text-gradient">3 Easy Steps</span></h2>
+          <p class="section-desc reveal animate-delay-2">No complex setup. Just pick your role, add your skills, and let
+            our AI do the rest.</p>
+          <!-- Tab Navigation -->
+          <div class="how-tabs reveal animate-delay-1"
+            style="display:flex; gap:6px; margin-top:16px; margin-bottom:16px; overflow-x: auto; white-space: nowrap; padding-bottom: 4px; scrollbar-width: none;">
+            <button class="btn btn-primary btn-sm how-tab-btn active"
+              onclick="switchHowTab('how-courses', 'mockup-courses', this)" style="flex-shrink:0;">Courses</button>
+            <button class="btn btn-secondary btn-sm how-tab-btn"
+              onclick="switchHowTab('how-explore', 'mockup-explore', this)" style="flex-shrink:0;">Explore
+              Roles</button>
+            <button class="btn btn-secondary btn-sm how-tab-btn"
+              onclick="switchHowTab('how-compare', 'mockup-compare', this)" style="flex-shrink:0;">Compare
+              Roles</button>
+          </div>
+
+          <div id="how-content-wrapper" style="margin-top:16px;">
+            <!-- Courses Pane -->
+            <div id="how-courses" class="how-pane" style="display:block;">
+              <div class="how-step reveal animate-delay-1">
+                <div class="how-step-num">1</div>
+                <div>
+                  <div class="how-step-title">Choose What You Want to Learn</div>
+                  <div class="how-step-desc">Tell us your subject, skill, or programming language, and choose your
+                    current learning level.</div>
+                </div>
+              </div>
+              <div class="how-step reveal animate-delay-2">
+                <div class="how-step-num">2</div>
+                <div>
+                  <div class="how-step-title">Discover the Best Resources</div>
+                  <div class="how-step-desc">Explore recommended tutorials, courses, videos, and practice materials
+                    suited to your needs.</div>
+                </div>
+              </div>
+              <div class="how-step reveal animate-delay-3" style="margin-bottom:0;">
+                <div class="how-step-num">3</div>
+                <div>
+                  <div class="how-step-title">Start Learning and Practicing</div>
+                  <div class="how-step-desc">Choose a resource, follow your learning path, and practice your new skills
+                    at your own pace.</div>
+                </div>
+              </div>
+              <div style="margin-top:32px;" class="reveal animate-delay-4">
+                <a href="courses.html" class="btn btn-primary btn-lg">Browse Recommended Courses </a>
+              </div>
+            </div>
+
+            <!-- Job Roles Pane -->
+            <div id="how-explore" class="how-pane" style="display:none;">
+              <div class="how-step">
+                <div class="how-step-num">1</div>
+                <div>
+                  <div class="how-step-title">Choose Your Dream Role</div>
+                  <div class="how-step-desc">Select the job you want to pursue, such as Software Developer, Data
+                    Analyst, or Cybersecurity Analyst.</div>
+                </div>
+              </div>
+              <div class="how-step">
+                <div class="how-step-num">2</div>
+                <div>
+                  <div class="how-step-title">Enter Your Skills</div>
+                  <div class="how-step-desc">Add the technical skills, tools, and knowledge you already have so the
+                    system can evaluate your readiness.</div>
+                </div>
+              </div>
+              <div class="how-step" style="margin-bottom:0;">
+                <div class="how-step-num">3</div>
+                <div>
+                  <div class="how-step-title">Check Your Job Readiness</div>
+                  <div class="how-step-desc">Get your readiness score, see which required skills you have, identify
+                    missing skills, and discover what you need to learn next.</div>
+                </div>
+              </div>
+              <div style="margin-top:32px;">
+                <a href="roles.html" class="btn btn-primary btn-lg">Start Your Assessment </a>
+              </div>
+            </div>
+
+            <!-- Compare Roles Pane -->
+            <div id="how-compare" class="how-pane" style="display:none;">
+              <div class="how-step">
+                <div class="how-step-num">1</div>
+                <div>
+                  <div class="how-step-title">Choose Two Job Roles</div>
+                  <div class="how-step-desc">Select any two careers youre interested in, such as Web Developer and Data
+                    Analyst.</div>
+                </div>
+              </div>
+              <div class="how-step">
+                <div class="how-step-num">2</div>
+                <div>
+                  <div class="how-step-title">Compare Skills and Requirements</div>
+                  <div class="how-step-desc">See the skills, tools, responsibilities, and learning requirements for both
+                    roles side by side.</div>
+                </div>
+              </div>
+              <div class="how-step" style="margin-bottom:0;">
+                <div class="how-step-num">3</div>
+                <div>
+                  <div class="how-step-title">Choose Your Career Path</div>
+                  <div class="how-step-desc">Understand the key differences and decide which role best matches your
+                    interests, strengths, and career goals.</div>
+                </div>
+              </div>
+              <div style="margin-top:32px;">
+                <a href="role-comparison.html" class="btn btn-primary btn-lg">Compare Roles Now </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal animate-delay-2 hidden-mobile" id="how-mockups-wrapper"
+          style="display: flex; align-items: center; justify-content: center;">
+          <!-- Courses Mockup -->
+          <div id="mockup-courses" class="how-mockup-pane" style="display:block; width: 100%;">
+            <div
+              style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:24px;box-shadow:var(--shadow-xl);">
+              <div
+                style="border:1px solid var(--border); border-radius: 6px; padding: 20px; display: flex; flex-direction: column; gap: 12px; background:var(--surface);">
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                  <div
+                    style="font-size: 0.75rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em;">
+                    <i class="ph-fill ph-check-circle"></i> Recommended
+                  </div>
+                  <span style="font-size: 0.75rem; color: var(--text-muted);">Coursera</span>
+                </div>
+                <div style="font-size: 1rem; font-weight: 600; color: var(--text-primary); line-height: 1.4;">Advanced
+                  Statistics & Probability</div>
+                <div style="display:flex; align-items:center; gap:8px; font-size:0.8rem; color:var(--text-secondary);">
+                  <span>4 Weeks</span> <span>Beginner Friendly</span>
+                </div>
+                <div
+                  style="background:var(--bg-card);border-radius:4px;padding:12px;color:var(--text-primary);text-align:center;font-size:0.85rem;font-weight:600; border:1px solid var(--border); margin-top: 8px;">
+                  View Curriculum
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Job Roles Mockup (Matches Original Readiness Card) -->
+          <div id="mockup-explore" class="how-mockup-pane" style="display:none; width: 100%;">
+            <div
+              style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow-xl);">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+                <div style="width:10px;height:10px;border-radius:50%;background:#ef4444;"></div>
+                <div style="width:10px;height:10px;border-radius:50%;background:#f59e0b;"></div>
+                <div style="width:10px;height:10px;border-radius:50%;background:#10b981;"></div>
+                <div
+                  style="flex:1;background:var(--surface);border-radius:4px;height:20px;margin-left:12px;display:flex;align-items:center;padding:0 10px;font-size:.72rem;color:var(--text-muted);">
+                  gapvice.app/results</div>
+              </div>
+              <div style="display:flex;gap:16px;margin-bottom:20px;">
+                <div style="text-align:center;flex:1;">
+                  <svg width="90" height="90" viewBox="0 0 90 90">
+                    <circle cx="45" cy="45" r="36" fill="none" stroke="var(--surface)" stroke-width="7" />
+                    <circle cx="45" cy="45" r="36" fill="none" stroke="url(#g1)" stroke-width="7" stroke-linecap="round"
+                      stroke-dasharray="226" stroke-dashoffset="40" transform="rotate(-90 45 45)" />
+                    <defs>
+                      <linearGradient id="g1" x1="0%" y1="0%" x2="100%">
+                        <stop offset="0%" stop-color="#6366f1" />
+                        <stop offset="100%" stop-color="#a855f7" />
+                      </linearGradient>
+                    </defs>
+                    <text x="45" y="49" text-anchor="middle" font-size="16" font-weight="800" fill="var(--text-primary)"
+                      font-family="'Plus Jakarta Sans',sans-serif">82%</text>
+                  </svg>
+                  <div style="font-size:.75rem;color:var(--text-muted);font-weight:600;">Match Score</div>
+                </div>
+                <div style="flex:2;">
+                  <div style="font-size:.78rem;font-weight:700;margin-bottom:8px;color:var(--text-secondary);">Skill
+                    Breakdown</div>
+                  <div style="display:flex;flex-direction:column;gap:6px;">
+                    <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:.8rem;"></span><span
+                        style="font-size:.78rem;flex:1;">Python, SQL, ML</span><span class="badge badge-success"
+                        style="font-size:.68rem;">Strong</span></div>
+                    <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:.8rem;"></span><span
+                        style="font-size:.78rem;flex:1;">Statistics</span><span class="badge badge-warning"
+                        style="font-size:.68rem;">Weak</span></div>
+                    <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:.8rem;"></span><span
+                        style="font-size:.78rem;flex:1;">Deep Learning</span><span class="badge badge-danger"
+                        style="font-size:.68rem;">Missing</span></div>
+                  </div>
+                </div>
+              </div>
+              <div
+                style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;">
+                <div style="font-size:.78rem;font-weight:700;margin-bottom:4px;color:var(--primary);"><i
+                    class="ph-fill ph-robot"></i> AI Suggestion</div>
+                <div style="font-size:.78rem;color:var(--text-secondary);line-height:1.5;">Focus on Statistics and
+                  TensorFlow. 2-3 months of consistent practice will boost your score to 95%+</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Compare Roles Mockup -->
+          <div id="mockup-compare" class="how-mockup-pane" style="display:none; width: 100%;">
+            <div
+              style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:32px;box-shadow:var(--shadow-xl);">
+              <div style="display:flex; gap:16px; margin-bottom: 24px;">
+                <div
+                  style="flex:1; background:var(--surface); border:1px solid var(--border); border-radius: 8px; padding: 20px; text-align:center;">
+                  <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);">Web Developer</div>
+                  <div style="font-size: 0.75rem; color: var(--success); font-weight:700; margin-top: 4px;">85% Match
+                  </div>
+                </div>
+                <div
+                  style="display:flex; align-items:center; font-size:.9rem; font-weight:600; color:var(--text-muted);">
+                  VS</div>
+                <div
+                  style="flex:1; background:var(--surface); border:1px solid var(--border); border-radius: 8px; padding: 20px; text-align:center;">
+                  <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);">Data Analyst</div>
+                  <div style="font-size: 0.75rem; color: var(--primary); font-weight:700; margin-top: 4px;">62% Match
+                  </div>
+                </div>
+              </div>
+              <div style="border-top:1px solid var(--border); padding-top:16px;">
+                <div style="font-size:.8rem;font-weight:700;margin-bottom:12px;color:var(--text-secondary);">Core
+                  Overlap</div>
+                <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                  <span class="badge"
+                    style="font-size:0.75rem; background: var(--bg); border:1px solid var(--border);">Problem
+                    Solving</span>
+                  <span class="badge"
+                    style="font-size:0.75rem; background: var(--bg); border:1px solid var(--border);">Git</span>
+                  <span class="badge"
+                    style="font-size:0.75rem; background: var(--bg); border:1px solid var(--border);">APIs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!--  REVIEWS  -->
+  <section class="section" id="reviews"
+    style="background:var(--bg-secondary);border-top:3px solid;border-image:linear-gradient(90deg,transparent,rgba(234,179,8,.45),transparent) 1;">
+    <div class="container">
+      <div
+        style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom:32px;">
+        <div>
+          <div class="section-label reveal">Example Success Stories</div>
+          <h2 class="section-title reveal animate-delay-1" style="margin-bottom:8px;">Loved by <span
+              class="text-gradient">Our Community</span></h2>
+          <p class="section-desc reveal animate-delay-2" style="margin:0; max-width:600px;">See how GapVice has
+            helped students and professionals bridge their skill gaps and land their dream job roles.</p>
+        </div>
+        <a href="reviews.html" id="viewMoreReviewsBtn" class="reveal animate-delay-2"
+          style="display:inline-flex; align-items:center; gap:8px; padding:10px 20px; border:1.5px solid var(--border); border-radius:50px; font-size:0.88rem; font-weight:700; color:var(--text-primary); background:transparent; text-decoration:none; white-space:nowrap; transition:border-color .25s, color .25s, box-shadow .25s, transform .25s; cursor:pointer; flex-shrink:0;"
+          onmouseover="this.style.borderColor='#6366f1';this.style.color='#6366f1';this.style.boxShadow='0 4px 18px rgba(99,102,241,.18)';this.style.transform='translateY(-2px)';this.querySelector('.btn-arrow').style.transform='translateX(4px)'"
+          onmouseout="this.style.borderColor='';this.style.color='';this.style.boxShadow='';this.style.transform='';this.querySelector('.btn-arrow').style.transform=''">
+          View More Reviews
+          <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+            style="transition:transform .25s; flex-shrink:0;">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="reviews-carousel">
+        <div class="reviews-track" id="reviewsTrack">
+          <!-- Review 1 -->
+          <article class="feature-card testimonial-card reveal">
+            <div
+              style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border); padding-bottom:16px;">
+              <div style="display:flex; gap:14px; align-items:center;">
+                <div
+                  style="width:48px; height:48px; border-radius:50%; background:linear-gradient(135deg,#6366f1,#a855f7); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.2rem; flex-shrink:0;">
+                  RJ
+                </div>
+                <div>
+                  <div style="font-weight:700; font-size:0.95rem; color:var(--text-primary);">Rahul Jain</div>
+                  <div style="font-size:0.78rem; color:var(--primary); font-weight:600;">Software Developer Intern</div>
+                </div>
+              </div>
+              <div style="display:flex; color:#f59e0b; font-size:1.1rem; gap:4px; align-items:center;">
+                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                  class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+              </div>
+            </div>
+            <p style="font-size:0.95rem; line-height:1.6; color:var(--text-secondary); flex:1; margin-bottom: 20px;">
+              GapVice completely changed how I approach my learning. The skill gap analysis accurately pointed out that
+              I
+              needed to focus more on System Design, and within 2 months I landed a role as a Backend Developer!
+            </p>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="feature-card testimonial-card reveal animate-delay-1">
+            <div
+              style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border); padding-bottom:16px;">
+              <div style="display:flex; gap:14px; align-items:center;">
+                <div
+                  style="width:48px; height:48px; border-radius:50%; background:linear-gradient(135deg,#10b981,#06b6d4); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.2rem; flex-shrink:0;">
+                  SA
+                </div>
+                <div>
+                  <div style="font-weight:700; font-size:0.95rem; color:var(--text-primary);">Sneha Agarwal</div>
+                  <div style="font-size:0.78rem; color:var(--primary); font-weight:600;">Data Analyst</div>
+                </div>
+              </div>
+              <div style="display:flex; color:#f59e0b; font-size:1.1rem; gap:4px; align-items:center;">
+                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                  class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+              </div>
+            </div>
+            <p style="font-size:0.95rem; line-height:1.6; color:var(--text-secondary); flex:1; margin-bottom: 20px;">
+              The role comparison tool is a lifesaver. I was confused between Data Analyst and Data Scientist, but
+              seeing
+              the clear breakdown of skills and salary expectations helped me make a confident career choice.
+            </p>
+          </article>
+
+          <!-- Review 3 -->
+          <article class="feature-card testimonial-card reveal animate-delay-2">
+            <div
+              style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border); padding-bottom:16px;">
+              <div style="display:flex; gap:14px; align-items:center;">
+                <div
+                  style="width:48px; height:48px; border-radius:50%; background:linear-gradient(135deg,#f59e0b,#ef4444); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.2rem; flex-shrink:0;">
+                  KP
+                </div>
+                <div>
+                  <div style="font-weight:700; font-size:0.95rem; color:var(--text-primary);">Karan Patel</div>
+                  <div style="font-size:0.78rem; color:var(--primary); font-weight:600;">Full Stack Engineer</div>
+                </div>
+              </div>
+              <div style="display:flex; color:#f59e0b; font-size:1.1rem; gap:4px; align-items:center;">
+                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                  class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+              </div>
+            </div>
+            <p style="font-size:0.95rem; line-height:1.6; color:var(--text-secondary); flex:1; margin-bottom: 20px;">
+              I used GapVice before applying to top product companies. It caught missing keywords I hadn't
+              even thought of. I truly believe that pushed my resume past the screening phase.
+            </p>
+          </article>
+        </div>
+
+        <div class="reviews-pagination" id="reviewsPagination">
+          <button class="review-dot active" aria-label="Go to review 1" data-index="0"></button>
+          <button class="review-dot" aria-label="Go to review 2" data-index="1"></button>
+          <button class="review-dot" aria-label="Go to review 3" data-index="2"></button>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:32px;" class="reveal animate-delay-3 hide-no-reviews-page">
+        <!-- Button intentionally removed until dynamic reviews page is published -->
+      </div>
+    </div>
+  </section>
+
+  <!--  CONTACT  -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+
+      <!-- Header -->
+      <div class="contact-header">
+        <div class="section-label reveal">Get In Touch</div>
+        <h2 class="section-title reveal animate-delay-1">We'd Love to <span class="text-gradient">Hear From You</span>
+        </h2>
+        <p class="section-desc reveal animate-delay-2">Have a question, feedback, or partnership idea? Drop us a
+          message.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- LEFT: Contact info rows -->
+        <div class="contact-info reveal-left">
+
+          <a class="contact-row" href="mailto:jimitiwari9@gmail.com" id="dynamicEmailLink">
+            <span class="contact-row-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+            </span>
+            <span class="contact-row-body">
+              <span class="contact-row-label">Email Us</span>
+              <span class="contact-row-value" id="dynamicEmailText">jimitiwari9@gmail.com</span>
+              <span class="contact-row-sub">We reply within 24 hours</span>
+            </span>
+          </a>
+
+          <div class="contact-row">
+            <span class="contact-row-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+            </span>
+            <span class="contact-row-body">
+              <span class="contact-row-label">Message Us On</span>
+              <span class="contact-row-value">8839202850</span>
+              <span class="contact-row-sub">Mon Sat 9 AM 6 PM IST</span>
+            </span>
+          </div>
+
+          <div class="contact-row">
+            <span class="contact-row-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </span>
+            <span class="contact-row-body">
+              <span class="contact-row-label">Office</span>
+              <span class="contact-row-value" id="dynamicAddressText">Jalandhar, Punjab, India</span>
+              <span class="contact-row-sub">City Center Area</span>
+            </span>
+          </div>
+
+          <div class="contact-row">
+            <span class="contact-row-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 2" />
+              </svg>
+            </span>
+            <span class="contact-row-body">
+              <span class="contact-row-label">Response Time</span>
+              <span class="contact-row-value">Under 24 hours</span>
+              <span class="contact-row-sub">Usually much faster</span>
+            </span>
+          </div>
+
+          <!-- Social -->
+          <div class="contact-social">
+            <div class="contact-social-label">Follow Our Journey</div>
+            <div class="contact-social-links">
+              <a class="contact-social-link" href="#" aria-label="X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M17.53 3h3.02l-6.6 7.55L21.7 21h-6.06l-4.75-6.2L5.4 21H2.37l7.06-8.07L2.3 3h6.2l4.3 5.68L17.53 3zm-1.06 16.2h1.67L7.6 4.7H5.81l10.66 14.5z" />
+                </svg>
+                <span>X</span>
+              </a>
+              <a class="contact-social-link" href="#" id="dynamicLinkedIn" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+              <a class="contact-social-link" href="#" id="dynamicInstagram" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+                <span>Instagram</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Contact Form -->
+        <div class="reveal-right">
+          <div class="contact-form-card">
+            <h3 class="contact-form-title">Send Us a Message</h3>
+            <p class="contact-form-sub">We read every message personally and respond quickly.</p>
+
+            <button type="button" class="contact-form-toggle" id="ctToggle" aria-expanded="false"
+              aria-controls="contactForm">
+              <span class="contact-form-toggle-text">Fill out the form</span>
+              <svg class="contact-form-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+
+            <div class="contact-social contact-social-mobile">
+              <div class="contact-social-label">Follow Our Journey</div>
+              <div class="contact-social-links">
+                <a class="contact-social-link" href="#" aria-label="X">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M17.53 3h3.02l-6.6 7.55L21.7 21h-6.06l-4.75-6.2L5.4 21H2.37l7.06-8.07L2.3 3h6.2l4.3 5.68L17.53 3zm-1.06 16.2h1.67L7.6 4.7H5.81l10.66 14.5z" />
+                  </svg>
+                  <span>X</span>
+                </a>
+                <a class="contact-social-link" href="#" aria-label="LinkedIn">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
+                <a class="contact-social-link" href="#" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                  <span>Instagram</span>
+                </a>
+              </div>
+            </div>
+
+            <form id="contactForm" onsubmit="submitContact(event)" novalidate>
+
+              <div class="contact-form-row">
+                <div class="contact-field">
+                  <label for="ctName">Your Name *</label>
+                  <input type="text" id="ctName" placeholder="Rahul Kumar" required />
+                </div>
+                <div class="contact-field">
+                  <label for="ctEmail">Email Address *</label>
+                  <input type="email" id="ctEmail" placeholder="rahul@email.com" required />
+                </div>
+              </div>
+
+              <div class="contact-field">
+                <label for="ctSubject">I'm reaching out about</label>
+                <select id="ctSubject">
+                  <option value="">Select a topic</option>
+                  <option value="feedback">Product Feedback</option>
+                  <option value="bug">Report a Bug</option>
+                  <option value="feature">Feature Request</option>
+                  <option value="partnership">Partnership / Collaboration</option>
+                  <option value="career">Career Guidance</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="contact-field">
+                <label for="ctMessage">Your Message *</label>
+                <textarea id="ctMessage" rows="4" placeholder="Tell us what's on your mind"
+                  oninput="document.getElementById('charCount').textContent=this.value.length+' / 1000';this.value=this.value.slice(0,1000);"
+                  required></textarea>
+                <div class="contact-char"><span id="charCount">0 / 1000</span></div>
+              </div>
+
+              <div id="ctError" class="contact-alert">Please fill in your name, a valid email, and a message.</div>
+              <div id="ctSuccess" class="contact-alert">Message sent! We'll reply within 24 hours.</div>
+
+              <button type="submit" class="contact-submit" id="ctSubmitBtn">
+                <span id="ctBtnIcon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="m21 3-9 18-2.5-7.5L2 11z" />
+                    <path d="M21 3 9.5 13.5" />
+                  </svg>
+                </span>
+                <span id="ctBtnText">Send Message</span>
+              </button>
+
+              <p class="contact-note">Your info is safe with us. We never share your data.</p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--  FOOTER  -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-conditions.html">Terms &amp;
+          Conditions</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+      </div>
+      <div>Made by <span style="color:var(--yellow);font-weight:700;">JT6 Productions</span> <span
+          style="color:var(--yellow);opacity:.7;">✦</span></div>
+      <div class="footer-copy"> 2026 GapVice. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- FAQ Modal -->
+  <div id="faqModal"
+    style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(4px);">
+    <div
+      style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-xl);padding:32px;max-width:400px;width:90%;box-shadow:var(--shadow-xl);position:relative;animation:bounceIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);">
+      <button onclick="document.getElementById('faqModal').style.display='none'"
+        style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text-muted);">&times;</button>
+      <div id="faqIcon" style="font-size:2.5rem;margin-bottom:16px;"></div>
+      <h3 id="faqTitle" style="font-size:1.2rem;margin-bottom:12px;font-weight:800;"></h3>
+      <p id="faqAnswer" style="font-size:0.95rem;color:var(--text-secondary);line-height:1.6;"></p>
+    </div>
+  </div>
+
+  <script src="app.js?v=2"></script>
+  <script>
+    /*  Contact Form  */
+    function submitContact(e) {
+      e.preventDefault();
+      const name = document.getElementById('ctName').value.trim();
+      const email = document.getElementById('ctEmail').value.trim();
+      const message = document.getElementById('ctMessage').value.trim();
+      const subject = document.getElementById('ctSubject').value;
+      const errEl = document.getElementById('ctError');
+      const sucEl = document.getElementById('ctSuccess');
+      const btn = document.getElementById('ctSubmitBtn');
+      const btnText = document.getElementById('ctBtnText');
+
+      // Validate
+      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      if (!name || !emailOk || !message) {
+        errEl.style.display = 'block';
+        sucEl.style.display = 'none';
+        // Shake animation on fields
+        ['ctName', 'ctEmail', 'ctMessage'].forEach(id => {
+          const el = document.getElementById(id);
+          if (!el.value.trim() || (id === 'ctEmail' && !emailOk)) {
+            el.classList.add('error');
+            el.style.animation = 'none';
+            el.style.borderColor = '#ef4444';
+            setTimeout(() => { el.classList.remove('error'); el.style.borderColor = ''; }, 2000);
+          }
+        });
+        return;
+      }
+
+      errEl.style.display = 'none';
+
+      // Loading state
+      btn.disabled = true;
+      btn.classList.add('is-loading');
+      btnText.textContent = 'Preparing...';
+
+      const phone = "918839202850";
+      const whatsappMessage = `Hello team GapVice this is:
+*Name:* ${name}
+*Email:* ${email}
+*Topic:* ${subject || 'Not specified'}
+*Message:* ${message}`;
+
+      const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(whatsappMessage)}`;
+      window.open(whatsappUrl, '_blank');
+
+      // Update UI
+      setTimeout(() => {
+        btn.classList.remove('is-loading');
+        btn.classList.add('is-done');
+        btnText.textContent = 'Redirected!';
+        sucEl.textContent = 'Redirecting to WhatsApp...';
+        sucEl.style.display = 'block';
+        sucEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        document.getElementById('contactForm').reset();
+        document.getElementById('charCount').textContent = '0 / 1000';
+
+        setTimeout(() => {
+          btn.disabled = false;
+          btn.classList.remove('is-done');
+          btnText.textContent = 'Send Message';
+          sucEl.style.display = 'none';
+        }, 5000);
+      }, 500);
+    }
+
+    /*  Contact Form Collapse (mobile)  */
+    const ctToggle = document.getElementById('ctToggle');
+    if (ctToggle) {
+      ctToggle.addEventListener('click', () => {
+        const form = document.getElementById('contactForm');
+        const open = form.classList.toggle('is-open');
+        ctToggle.setAttribute('aria-expanded', String(open));
+        ctToggle.querySelector('.contact-form-toggle-text').textContent = open ? 'Close the form' : 'Fill out the form';
+      });
+    }
+
+    /*  FAQ Modal Logic  */
+    function showFAQ(type) {
+      const modal = document.getElementById('faqModal');
+      const icon = document.getElementById('faqIcon');
+      const title = document.getElementById('faqTitle');
+      const answer = document.getElementById('faqAnswer');
+
+      const faqs = {
+        free: { icon: '', title: 'Is it free?', answer: 'Yes! GapVice is completely free to use for students. We believe career guidance should be accessible to everyone.' },
+        accuracy: { icon: '', title: 'How accurate is the AI?', answer: 'Our AI engine is trained on thousands of real-world job descriptions and industry benchmarks to provide a highly accurate and realistic match score.' },
+        save: { icon: '', title: 'Can I save my results?', answer: 'Yes, you can easily save results, print your personalized roadmap as a PDF, or copy a shareable link to review later.' },
+        roles: { icon: '', title: 'Are more roles coming?', answer: 'Absolutely! We are continuously adding new job roles across different domains including Management, Marketing, Design, and more.' },
+        score: { icon: '', title: 'How does the score work?', answer: 'We evaluate your uploaded skills against the core competencies extracted from industry job descriptions and weigh them dynamically based on relevance, yielding a precise percentage score.' },
+        account: { icon: '', title: 'Do I need an account?', answer: 'Not right now! You can explore pathways, review gaps, and receive suggestions as a guest. Accounts will be added soon for advanced profile saving.' }
+      };
+
+      if (faqs[type]) {
+        icon.textContent = faqs[type].icon;
+        title.textContent = faqs[type].title;
+        answer.textContent = faqs[type].answer;
+        modal.style.display = 'flex';
+      }
+    }
+
+    // Close modal if user clicks outside of it
+    window.addEventListener('click', function (event) {
+      const modal = document.getElementById('faqModal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+
+    /*  Reviews Carousel Logic  */
+    document.addEventListener("DOMContentLoaded", function () {
+      const track = document.getElementById('reviewsTrack');
+      const dots = document.querySelectorAll('.review-dot');
+
+      if (track && dots.length > 0) {
+        track.addEventListener('scroll', () => {
+          // Calculate the currently visible item index based on scroll position
+          let index = Math.round(track.scrollLeft / track.clientWidth);
+          if (index < 0) index = 0;
+          if (index >= dots.length) index = dots.length - 1;
+
+          dots.forEach(d => d.classList.remove('active'));
+          dots[index].classList.add('active');
+        });
+
+        dots.forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+            track.scrollTo({
+              left: index * track.clientWidth,
+              behavior: 'smooth'
+            });
+          });
+        });
+      }
+    });
+
+    /*  How it Works Tabs Logic  */
+    function switchHowTab(paneId, mockupId, btn) {
+      // 1. Hide all left panes
+      document.querySelectorAll('.how-pane').forEach(el => {
+        el.style.display = 'none';
+      });
+      // 2. Hide all right mockup panes
+      document.querySelectorAll('.how-mockup-pane').forEach(el => {
+        el.style.display = 'none';
+      });
+      // 3. Reset button states
+      document.querySelectorAll('.how-tab-btn').forEach(b => {
+        b.classList.remove('btn-primary');
+        b.classList.add('btn-secondary');
+        b.classList.remove('active');
+      });
+
+      // 4. Activate target panes
+      document.getElementById(paneId).style.display = 'block';
+      document.getElementById(mockupId).style.display = 'block';
+
+      // 5. Activate clicked button
+      btn.classList.add('btn-primary', 'active');
+      btn.classList.remove('btn-secondary');
+    }
+  </script>
+</body>
+
+</html>
